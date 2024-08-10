@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import axios from 'axios'
+import { useNavigate } from "react-router-dom"
 
 import './styles/form.css';  // Import the CSS file
 
 function RegistrationForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate()
 
   const handleSubmit = (e) => {
     e.preventDefault();
     axios.post('http://localhost:3001/register', {username, password})
     .then(result => console.log(result))
+    navigate('/login')
     .catch(error => console.log(error))
   }
 
