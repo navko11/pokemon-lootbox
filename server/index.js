@@ -117,7 +117,7 @@ app.post('/register', (request, response) => {
     .catch(error => response.status(500).json(error));
 });
 
-app.get('/api/pokemons', async (request, response) => {
+app.get('/openbox', async (request, response) => {
     try {
       const items = await Pokemon.find(); // fetch all pokemon from the database
       response.json(items);

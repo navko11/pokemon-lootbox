@@ -10,10 +10,11 @@ function Lootbox() {
 
   const openLootbox = async () => {
     try {
-      const response = await axios.get('http://localhost:3001/api/lootbox');
+      const response = await axios.get('http://localhost:3001/openbox');
       const items = response.data;
 
       const randomIndex = Math.floor(Math.random() * 100);
+      console.log('Random Index:', randomIndex);
       let rarity = 'common';
       if (randomIndex < 19) rarity = 'rare';
       if (randomIndex < 1) rarity = 'legendary';
@@ -23,7 +24,7 @@ function Lootbox() {
 
       setItem(randomItem);
     } catch (error) {
-      console.error('Error opening lootbox:', error);
+      console.log(error('Error opening lootbox:', error));
     }
   };
 
