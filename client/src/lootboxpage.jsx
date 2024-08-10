@@ -10,7 +10,7 @@ function Lootbox() {
 
   const openLootbox = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/lootbox');
+      const response = await axios.get('http://localhost:3001/api/lootbox');
       const items = response.data;
 
       const randomIndex = Math.floor(Math.random() * 100);
