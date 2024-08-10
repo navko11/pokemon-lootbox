@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import './styles/form.css';  // Import the CSS file
 
@@ -40,6 +40,7 @@ function RegistrationForm() {
         />
         <button className="form-button" type="submit">Register</button>
       </form>
+      <p>Already have an account? <Link to="/login" className="user-link">Login</Link></p>
     </div>
   );
 }

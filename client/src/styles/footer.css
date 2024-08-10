@@ -1,0 +1,11 @@
+
+footer {
+    background-color: #333;
+    padding: 35px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 -05px rgba(0, 0, 0, 0.2); 
+  }

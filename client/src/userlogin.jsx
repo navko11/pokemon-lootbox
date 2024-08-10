@@ -43,7 +43,7 @@ function Login() {
           />
           <button className="form-button" type="submit">Login</button>
         </form>
-        <p>Don't have an account? <Link to="/register" className="register-link">Register</Link></p>
+        <p>Don't have an account? <Link to="/register" className="user-link">Register</Link></p>
       </div>
     );
   }
