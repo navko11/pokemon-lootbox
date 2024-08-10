@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios'
-import { Link, useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 import './styles/form.css';  // Import the CSS file
 
@@ -19,7 +19,6 @@ function RegistrationForm() {
 
 
   return (
-    
     <div className="form-container">
       <h1 className="form-title">Registration Form</h1>
       <form className="registration-form" onSubmit={handleSubmit}>
