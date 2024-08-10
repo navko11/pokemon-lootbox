@@ -19,6 +19,7 @@ function RegistrationForm() {
 
 
   return (
+    
     <div className="form-container">
       <h1 className="form-title">Registration Form</h1>
       <form className="registration-form" onSubmit={handleSubmit}>
