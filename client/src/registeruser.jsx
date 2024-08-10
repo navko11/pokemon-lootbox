@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
+import axios from 'axios'
+
 import './styles/form.css';  // Import the CSS file
 
 function RegistrationForm() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission logic here
-    console.log('Username:', username);
-    console.log('Password:', password);
-  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('', {username, password})
+    .then(result => console.log(result))
+    .catch(error => console.log(error))
+  }
+
 
   return (
     <div className="form-container">
@@ -19,20 +22,18 @@ function RegistrationForm() {
         <label className="form-label" htmlFor="username">Username:</label>
         <input
           className="form-input"
+          placeholder="Enter username"
           type="text"
-          id="username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
-          required
         />
         <label className="form-label" htmlFor="password">Password:</label>
         <input
           className="form-input"
+          placeholder="Enter password"
           type="password"
-          id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          required
         />
         <button className="form-button" type="submit">Register</button>
       </form>
