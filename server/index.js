@@ -8,4 +8,10 @@ const app =express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect()
+mongoose.connect("mongodb://localhost:27017/user")
+
+
+
+app.listen(3001, () => {
+    console.log("Server is running")
+})
