@@ -33,6 +33,11 @@ app.post('/register', (request, response, next) => {
     .catch(error => response.json(error))
 })
 
+
+
+
+
+
 app.listen(3001, () => {
     console.log("Server is running")
 })
