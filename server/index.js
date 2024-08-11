@@ -14,12 +14,12 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to user database
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_URL)
   .then(() => console.log('Connected to user database'))
   .catch(err => console.error('Error connecting to user database:', err));
 
 // Connect to pokemon database
-const pokemonDB = mongoose.createConnection(process.env.POKEMON_DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
+const pokemonDB = mongoose.createConnection(process.env.POKEMON_DB_URL)
 
 pokemonDB.once('open', () => {
   console.log('Connected to pokemon database');
