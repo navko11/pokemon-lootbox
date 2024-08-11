@@ -9,11 +9,14 @@ function Home() {
     <div className="home-container">
       <Header />
       <div className="menu-container">
-        <h1>Welcome</h1>
+        <h1>Welcome, User</h1>
+        <p>Start collecting pokemon!</p>
         <div className="menu">
           <Link className="select" to="/inventory">View Inventory</Link>
           <br></br>
           <Link className="select" to="/lootbox">Open Lootbox</Link>
+          <br></br>
+          <Link className="select" to="/about">About/Help</Link>
         </div>
       </div>
       <Footer />

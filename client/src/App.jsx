@@ -6,6 +6,7 @@ import Home from './home'
 import Inventory from './inventory'
 import Lootbox from './lootboxpage'
 import ShopPage from './shop'
+import About from './about'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route path='/inventory' element={<Inventory />} />
         <Route path='/lootbox' element={<Lootbox />} />
         <Route path='/shop' element={<ShopPage />} />
+        <Route path='/about' element={<About />} />
       </Routes>
     </BrowserRouter>
   )
