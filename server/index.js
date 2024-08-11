@@ -1,3 +1,5 @@
+require('dotenv').config(); 
+
 const express = require("express");
 const mongoose = require("mongoose");
 const Pokemon = require('./models/pokemon'); 
@@ -11,12 +13,12 @@ app.use(express.json());
 app.use(cors());
 
 // Connect to user database
-mongoose.connect("mongodb://localhost:27017/user",)
-.then(() => console.log('Connected to user database'))
-.catch(err => console.error('Error connecting to user database:', err));
+mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connected to user database'))
+  .catch(err => console.error('Error connecting to user database:', err));
 
 // Connect to pokemon database
-const pokemonDB = mongoose.createConnection("mongodb://localhost:27017/pokemonDB",);
+const pokemonDB = mongoose.createConnection(process.env.POKEMON_DB_URL, { useNewUrlParser: true, useUnifiedTopology: true });
 
 pokemonDB.once('open', () => {
   console.log('Connected to pokemon database');
@@ -83,7 +85,7 @@ const pokemons = [
 const populateDatabase = async () => {
   try {
     const count = await Pokemon.countDocuments({});
-    if (count == 50) {
+    if (count === 50) {
       console.log('Database already populated.');
       return;
     }
@@ -120,13 +122,13 @@ app.post('/register', (request, response) => {
 });
 
 app.get('/openbox', async (request, response) => {
-    try {
-      const items = await Pokemon.find(); // fetch all pokemon from the database
-      response.json(items);
-    } catch (error) {
-      response.status(500).json({ error: 'Error fetching Pokémon data' });
-    }
-  });
+  try {
+    const items = await Pokemon.find(); // fetch all pokemon from the database
+    response.json(items);
+  } catch (error) {
+    response.status(500).json({ error: 'Error fetching Pokémon data' });
+  }
+});
 
 app.listen(3001, () => {
   console.log("Server is running on port 3001");
