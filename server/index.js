@@ -7,19 +7,20 @@ const Pokemon = require('./models/pokemon');
 const cors = require("cors");
 const UserModel = require('./models/user');
 
-
+console.log('DATABASE_URL:', process.env.DATABASE_URL);
+console.log('POKEMON_DB_URL:', process.env.POKEMON_DB_URL);
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
 // Connect to user database
-mongoose.connect(process.env.DATABASE_URL)
+mongoose.connect(process.env.DATABASE_URL || "mongodb://localhost:27017/user")
   .then(() => console.log('Connected to user database'))
   .catch(err => console.error('Error connecting to user database:', err));
 
 // Connect to pokemon database
-const pokemonDB = mongoose.createConnection(process.env.POKEMON_DB_URL)
+const pokemonDB = mongoose.createConnection(process.env.POKEMON_DB_URL || "mongodb://localhost:27017/pokemonDB")
 
 pokemonDB.once('open', () => {
   console.log('Connected to pokemon database');
