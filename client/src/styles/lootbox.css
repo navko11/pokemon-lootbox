@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../assets/Pokemonbackground.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px; 
+  }
+  
+  .lootbox-frame {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .lootbox-result {
+    text-align: center;
+    padding: 30px; 
+    border-radius: 12px; 
+    max-width: 600px; 
+    width: 100%; 
+  }
+  
+  .lootbox-result h2 {
+    margin-bottom: 15px; 
+    font-size: 2rem; 
+  }
+  
+  .lootbox-result p {
+    margin-bottom: 15px; 
+    font-size: 1.5rem; 
+  }
+  
+  .lootbox-result img {
+    width: 200px; 
+    height: 200px;
+    object-fit: contain; 
+    border-radius: 10px; 
+  }
+  
+  .lootbox-button {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .lootbox-button button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem; 
+  }
+  
+  .lootbox-button button:hover {
+    background-color: #45a049;
+  }

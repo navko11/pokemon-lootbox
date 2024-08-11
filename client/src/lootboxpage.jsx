@@ -6,6 +6,8 @@ import Header from './components/header'
 import Footer from './components/footer'
 import images from './assets/pokemonsprites/1sprites';
 
+import './styles/Lootbox.css';
+
 function Lootbox() {
     const [item, setItem] = useState(null);
   
@@ -37,28 +39,28 @@ function Lootbox() {
     };
   
     return (
-      <div>   
-        <Header />
-        <div>
+        <main>
+          <Header />
+            <div className="lootbox-frame">
+              {item && (
+                <div className="lootbox-result">
+                  <h2>You got a {item.rarity} pokemon!</h2>
+                  <p>{item.name}</p>
+                  {item.image ? (
+                    <img src={item.image} alt={item.name} onError={() => console.log('Image load failed')} />
+                  ) : (
+                    <p>Image not available</p>
+                  )}
+                </div>
+              )}
+            </div>
+          <div className="lootbox-button">
           <button onClick={openLootbox}>Open Lootbox</button>
-          <div>
-            {item && (
-              <div>
-                <h2>You got a {item.rarity} pokemon!</h2>
-                <p>{item.name}</p>
-                {item.image ? (
-                  <img src={item.image} alt={item.name} onError={() => console.log('Image load failed')} />
-                ) : (
-                  <p>Image not available</p>
-                )}
-              </div>
-            )}
           </div>
-        </div>
-        <Footer />
-      </div>     
-    );
-  }
+          <Footer />
+        </main>     
+      );
+    }
   
   export default Lootbox;
   
