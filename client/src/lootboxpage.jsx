@@ -8,6 +8,7 @@ import images from './assets/pokemonsprites/1sprites';
 
 import './styles/Lootbox.css';
 
+// function to start rolling lootboxes and applying RNG formula
 function Lootbox() {
   const [items, setItems] = useState([]);
 

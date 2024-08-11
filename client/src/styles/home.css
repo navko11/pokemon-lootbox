@@ -1,11 +1,18 @@
-
+body {
+    background-image: url('../assets/Pokemonbackground.png');
+    background-size: cover; 
+    background-position: center;
+    background-repeat: repeat;
+}
 
 .menu-container {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-flex: 1; 
+text-align: center;
+padding: 30px;
+border: 2px solid #ddd;
+border-radius: 10px;
+box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+background: rgba(247, 247, 247, 0.5);
+backdrop-filter: blur(10px); 
 max-width: 650px;
 }
 

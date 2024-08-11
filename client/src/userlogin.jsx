@@ -4,6 +4,7 @@ import axios from 'axios'
 
 import './styles/form.css'; 
 
+// user login function with change state
 function Login() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
@@ -22,6 +23,9 @@ function Login() {
     }
   
     return (
+     <main>
+      <h1>POKEMON LOOTBOX</h1>
+      <h3>Login/Register to begin using app!</h3>
       <div className="form-container">
         <h1 className="form-title">Login</h1>
         <form className="registration-form" onSubmit={handleSubmit}>
@@ -45,6 +49,7 @@ function Login() {
         </form>
         <p>Don't have an account? <Link to="/register" className="user-link">Register</Link></p>
       </div>
+    </main>   
     );
   }
 
