@@ -1,74 +1,56 @@
-body {
-    margin: 0;
-    padding: 0;
-    height: 100vh; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-image: url('../assets/Pokemonbackground.png'); 
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat; 
-  }
-  
-  main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 800px; 
-  }
-  
-  .lootbox-frame {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  
-  .lootbox-result {
-    text-align: center;
-    padding: 30px; 
-    border-radius: 12px; 
-    max-width: 600px; 
-    width: 100%; 
-  }
-  
-  .lootbox-result h2 {
-    margin-bottom: 15px; 
-    font-size: 2rem; 
-  }
-  
-  .lootbox-result p {
-    margin-bottom: 15px; 
-    font-size: 1.5rem; 
-  }
-  
-  .lootbox-result img {
-    width: 200px; 
-    height: 200px;
-    object-fit: contain; 
-    border-radius: 10px; 
-  }
-  
-  .lootbox-button {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-  
-  .lootbox-button button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem; 
-  }
-  
-  .lootbox-button button:hover {
-    background-color: #45a049;
-  }
+.lootbox-frame {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Container for the individual lootbox result items */
+.lootbox-results {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line if there are too many */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Centers items horizontally */
+  align-items: flex-start; /* Aligns items to the top of the container */
+}
+
+/* Styling for each lootbox result */
+.lootbox-result {
+  text-align: center;
+  padding: 30px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  max-width: 200px; /* Adjust size as needed */
+  width: 100%;
+  height: 18rem;
+}
+
+.lootbox-result img {
+  max-width: 100%; /* Ensure the image fits within the width of the box */
+  max-height: 10rem; /* Ensure the image fits within the height of the box *//* Maintain aspect ratio and fit the image inside the box */
+  border-radius: 10px; /* Consistent with the border-radius of the box */
+}
+
+/* Container for buttons */
+.lootbox-buttons {
+  margin: 20px 0; /* Adds spacing around the buttons */
+  display: flex;
+  justify-content: center; /* Centers buttons horizontally */
+  gap: 10px; /* Space between buttons */
+}
+
+/* Styling for buttons */
+.lootbox-buttons button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lootbox-buttons button:hover {
+  background-color: #45a049;
+}

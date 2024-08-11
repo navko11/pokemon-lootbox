@@ -39,7 +39,7 @@ const pokemons = [
   { name: 'Dragonite', rarity: 'rare' },
   { name: 'Eevee', rarity: 'common' },
   { name: 'Ekans', rarity: 'common' },
-  { name: 'Electrode', rarity: 'common' },
+  { name: 'Electrode', rarity: 'rare' },
   { name: 'Flareon', rarity: 'rare' },
   { name: 'Gengar', rarity: 'rare' },
   { name: 'Golduck', rarity: 'rare' },
@@ -74,7 +74,7 @@ const pokemons = [
   { name: 'Squirtle', rarity: 'common' },
   { name: 'Vaporeon', rarity: 'rare' },
   { name: 'Venusaur', rarity: 'rare' },
-  { name: 'Voltorb', rarity: 'rare' },
+  { name: 'Voltorb', rarity: 'common' },
   { name: 'Vulpix', rarity: 'common' },
   { name: 'Zapdos', rarity: 'legendary' },
   { name: 'Zubat', rarity: 'common' }
@@ -83,7 +83,7 @@ const pokemons = [
 const populateDatabase = async () => {
   try {
     const count = await Pokemon.countDocuments({});
-    if (count > 0) {
+    if (count == 50) {
       console.log('Database already populated.');
       return;
     }
