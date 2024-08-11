@@ -1,48 +1,64 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'
+
 import axios from 'axios';
 
 import Header from './components/header'
 import Footer from './components/footer'
+import images from './assets/pokemonsprites/1sprites';
 
 function Lootbox() {
-  const [item, setItem] = useState(null);
-
-  const openLootbox = async () => {
-    try {
-      const response = await axios.get('http://localhost:3001/openbox');
-      const items = response.data;
-
-      const randomIndex = Math.floor(Math.random() * 100);
-      console.log('Random Index:', randomIndex);
-      let rarity = 'common';
-      if (randomIndex < 19) rarity = 'rare';
-      if (randomIndex < 1) rarity = 'legendary';
-
-      const filteredItems = items.filter(i => i.rarity === rarity);
-      const randomItem = filteredItems[Math.floor(Math.random() * filteredItems.length)];
-
-      setItem(randomItem);
-    } catch (error) {
-      console.log(error('Error opening lootbox:', error));
-    }
-  };
-
-  return (
-    <div>   
+    const [item, setItem] = useState(null);
+  
+    const openLootbox = async () => {
+      try {
+        const response = await axios.get('http://localhost:3001/openbox');
+        const items = response.data;
+  
+        const randomIndex = Math.floor(Math.random() * 100);
+        console.log('Random Index:', randomIndex);
+        let rarity = 'common';
+        if (randomIndex < 19) rarity = 'rare';
+        if (randomIndex < 1) rarity = 'legendary';
+  
+        const filteredItems = items.filter(i => i.rarity === rarity);
+        const randomItem = filteredItems[Math.floor(Math.random() * filteredItems.length)];
+  
+        // Find the image for the selected item
+        const matchedImage = images.find(img => img.name.toLowerCase() === randomItem.name.toLowerCase())?.image;
+  
+        // Set the item with the image
+        setItem({
+          ...randomItem,
+          image: matchedImage 
+        });
+      } catch (error) {
+        console.error('Error opening lootbox:', error);
+      }
+    };
+  
+    return (
+      <div>   
         <Header />
         <div>
-        <button onClick={openLootbox}>Open Lootbox</button>
-        {item && (
-            <div>
-            <h2>You've got a {item.rarity} item!</h2>
-            <p>{item.name}</p>
-            </div>
-        )}
+          <button onClick={openLootbox}>Open Lootbox</button>
+          <div>
+            {item && (
+              <div>
+                <h2>You got a {item.rarity} pokemon!</h2>
+                <p>{item.name}</p>
+                {item.image ? (
+                  <img src={item.image} alt={item.name} onError={() => console.log('Image load failed')} />
+                ) : (
+                  <p>Image not available</p>
+                )}
+              </div>
+            )}
+          </div>
         </div>
         <Footer />
-    </div>     
-  );
-}
-
-export default Lootbox;
+      </div>     
+    );
+  }
+  
+  export default Lootbox;
+  

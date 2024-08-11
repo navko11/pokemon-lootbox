@@ -2,7 +2,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const Pokemon = require('./models/pokemon'); 
 const cors = require("cors");
-const UserModel = require('./models/user'); 
+const UserModel = require('./models/user');
+
+
 
 const app = express();
 app.use(express.json());
@@ -26,7 +28,7 @@ pokemonDB.on('error', (error) => {
 });
 
 const pokemons = [
-  { name: 'Abra', rarity: 'common' },
+  { name: 'Abra', rarity: 'common', },
   { name: 'Arcanine', rarity: 'rare' },
   { name: 'Articuno', rarity: 'legendary' },
   { name: 'Blastoise', rarity: 'rare' },
