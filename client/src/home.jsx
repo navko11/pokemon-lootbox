@@ -10,7 +10,7 @@ function Home() {
       <Header />
       <div className="menu-container">
         <h1>Welcome, User</h1>
-        <p>Start collecting pokemon!</p>
+        <p>Try your luck at opening Pokemon lootboxes for a chance to obtain very rare Pokemon! Go to About/Help for more information.</p>
         <div className="menu">
           <Link className="select" to="/inventory">View Inventory</Link>
           <br></br>

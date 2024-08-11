@@ -5,16 +5,16 @@
   align-items: center;
 }
 
-/* Container for the individual lootbox result items */
+
 .lootbox-results {
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap to the next line if there are too many */
-  gap: 20px; /* Space between items */
-  justify-content: center; /* Centers items horizontally */
-  align-items: flex-start; /* Aligns items to the top of the container */
+  flex-wrap: wrap; 
+  gap: 20px;
+  justify-content: center; 
+  align-items: flex-start; 
 }
 
-/* Styling for each lootbox result */
+
 .lootbox-result {
   text-align: center;
   padding: 30px;
@@ -22,26 +22,26 @@
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   background-color: white;
-  max-width: 200px; /* Adjust size as needed */
+  max-width: 200px; 
   width: 100%;
   height: 18rem;
 }
 
 .lootbox-result img {
-  max-width: 100%; /* Ensure the image fits within the width of the box */
-  max-height: 10rem; /* Ensure the image fits within the height of the box *//* Maintain aspect ratio and fit the image inside the box */
-  border-radius: 10px; /* Consistent with the border-radius of the box */
+  max-width: 100%; 
+  max-height: 10rem; 
+  border-radius: 10px; 
 }
 
-/* Container for buttons */
+
 .lootbox-buttons {
-  margin: 20px 0; /* Adds spacing around the buttons */
+  margin: 20px 0; 
   display: flex;
-  justify-content: center; /* Centers buttons horizontally */
-  gap: 10px; /* Space between buttons */
+  justify-content: center; 
+  gap: 10px; 
 }
 
-/* Styling for buttons */
+
 .lootbox-buttons button {
   padding: 10px 20px;
   background-color: #4CAF50;
