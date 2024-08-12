@@ -1,0 +1,26 @@
+
+
+bubble {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 200px; 
+    background-color: #f0f0f0; 
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0px; 
+    width: 400px; 
+    max-width: 600px; 
+    margin: 0 auto; 
+  }
+  
+
+  bubble h1 {
+    font-size: 1.5rem; 
+    color: #333; 
+    margin: 0; 
+    line-height: 1.2; 
+    padding: 15px;
+  }
