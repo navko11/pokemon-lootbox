@@ -35,3 +35,21 @@
   .highlight-gold {
     color: goldenrod; 
   }
+
+  .return {
+    font-size: 1.2rem;
+    color: #007bff;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  .return:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
