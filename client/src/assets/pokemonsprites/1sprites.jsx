@@ -28,7 +28,7 @@ import magnemiteImage from './magnemite.png';
 import magnetonImage from './magneton.png';
 import mewtwoImage from './mewtwo.png';
 import moltresImage from './moltres.png';
-import mrMimeImage from './mrMime.png';
+import mrMimeImage from './mrmime.png';
 import ninetalesImage from './ninetales.png';
 import oddishImage from './oddish.png';
 import onixImage from './onix.png';

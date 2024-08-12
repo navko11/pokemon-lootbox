@@ -20,7 +20,7 @@ function Lootbox() {
       const newItems = [];
       for (let i = 0; i < num; i++) {
         const randomIndex = Math.floor(Math.random() * 100);
-        console.log('Random Index:', randomIndex);
+        console.log('Random Index:', randomIndex, items.name);
         let rarity = 'common';
         if (randomIndex < 19) rarity = 'rare';
         if (randomIndex < 1) rarity = 'legendary';
