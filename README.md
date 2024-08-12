@@ -8,7 +8,9 @@ Deployed Website
 
 https://pokelootbox.netlify.app
 
-GitBash terminal used in VScode
+MongoDB connection environment is not functioning so you may need to run the source from localhost after installing the packages
+
+GitBash terminal was used in production of app
 
 Made with React + Vite for performance
 
