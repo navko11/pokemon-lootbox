@@ -1,5 +1,7 @@
 # T3A2-B - Pokemon Lootbox (Fullstack app)
 
+
+
 The website has been deployed and closely resembles the wireframes which i had planned initally. 
 There are some minor changes/additions in the current deployment which differ slightly from the planning phase.
 
@@ -26,31 +28,31 @@ Attached below are images of the pages/components of the website
 
 ### Login and registration forms
 Simple forms to register and login to use the app
-![alt text](../docs/login.png)!
-[alt text](../docs/registration.png)
+![alt text](docs/login.png)!
+![alt text](docs/registration.png)
 
 ### Homepage after logging in
 Screenshot is as displayed - Widescreen 34" screen
-![alt text](../docs/fullhomepage.png)
+![alt text](docs/fullhomepage.png)
 
 ### Header and footer components
 Simple navbar links and footer message visible to user audience
-![alt text](../docs/navlinks.png)
-![alt text](../docs/footermessage.png)
+![alt text](docs/navlinks.png)
+![alt text](docs/footermessage.png)
 
 ### About page
 How to use the App and extra information
-![alt text](../docs/aboutpage.png)
+![alt text](docs/aboutpage.png)
 
 ### Lootbox page & Open 1 or 5 boxes
 Omitted the Popup window event mentioned in planning to display on the page 
-![alt text](../docs/lootboxpage.png)
-![alt text](../docs/lootboxopen1.png)
-![alt text](../docs/lootboxopen5.png)
+![alt text](docs/lootboxpage.png)
+![alt text](docs/lootboxopen1.png)
+![alt text](docs/lootboxopen5.png)
 
 ### Dev message for sections of website not completed
 This was not included in the planning stage, but I added this with intention for the reason i could not complete parts of the website mentioned in planning
-![alt text](../docs/devmessage.png)
+![alt text](docs/devmessage.png)
 
 With the dev message and footer message components, I can visibly explain the state the app is in.
 This gives users the expectation of new features being developed within the app.
@@ -61,15 +63,15 @@ The "About page" supports this as it mentions the first deployment to be a "vers
 Attempts to deploy to render is live but still failing to connect to MongoDB
 
 
-![alt text](../docs/renderdeployment1.png)
-![alt text](../docs/renderdeployment2.png)
-![alt text](../docs/renderdeployment3.png)
-![alt text](../docs/renderdeployment4.png)
+![alt text](docs/renderdeployment1.png)
+![alt text](docs/renderdeployment2.png)
+![alt text](docs/renderdeployment3.png)
+![alt text](docs/renderdeployment4.png)
 
 ## Trello
 Trello planning on the day of submission
 
-![alt text](../docs/Trellosubmit.png)
+![alt text](docs/Trellosubmit.png)
 
 _________________________________________________________________________________
 
@@ -130,11 +132,11 @@ MERN stack:
 ## Dataflow Diagram
 
 
-![alt text](../docs/DFD.png)
+![alt text](docs/DFD.png)
 
 ## Application Architecture Diagram
 
-![alt text](../docs/AAD.png)
+![alt text](docs/AAD.png)
 
 ## Wireframes for Desktop and Mobile screen sizes
 
@@ -144,33 +146,33 @@ Wireframes made using https://app.uizard.io/
 
 A simple design for the input login screen and homepage after successful login. Register button is visible for first time users of the app. After successful login a menu will be displayed on the user homepage
 
-![alt text](<../docs/wireframe login desktop.png>)
-![alt text](<../docs/wireframe login mobile.png>)
-![alt text](<../docs/wireframe after login desktop.png>)
-![alt text](<../docs/wireframe after login mobile.png>)
+![alt text](<docs/wireframe login desktop.png>)
+![alt text](<docs/wireframe login mobile.png>)
+![alt text](<docs/wireframe after login desktop.png>)
+![alt text](<docs/wireframe after login mobile.png>)
 
 ### Account top up page to get points
 
 The top up page for users to purchase points for currency. (This app will be generous and offer the points to the user without purchasing). 
 As the currency offers increase, it is noticeable that bonus points are also given. This is to incite users to spend more to get a little extra.
 
-![alt text](<../docs/wireframe topup page desktop.png>)
-![alt text](<../docs/wireframe topup page mobile.png>)
+![alt text](<docs/wireframe topup page desktop.png>)
+![alt text](<docs/wireframe topup page mobile.png>)
 
 ### Account Inventory page - Desktop 
 
 Displays the users account inventory for existing pokemon obtained from lootboxes
 
-![alt text](<../docs/wireframe owned pokemon desktop.png>)
-![alt text](<../docs/wireframe owned pokemon mobile.png>)
+![alt text](<docs/wireframe owned pokemon desktop.png>)
+![alt text](<docs/wireframe owned pokemon mobile.png>)
 
 ### Lootbox page and pop-up events for opening lootbox - Desktop
 
 Open lootbox screen and options for single or multiple lootbox openings. When prompted a pop-up screen will display the rewards. User will need to close the popup screen to open the lootboxes from the page.
 
-![alt text](<../docs/wireframe lootbox desktop.png>) ![alt text](<../docs/wireframe lootbox mobile.png>)
-![alt text](<../docs/wireframe lootbox popup desktop.png>) ![alt text](<../docs/wireframe lootbox popup mobile.png>)
-![alt text](<../docs/wireframe lootbox open 5 desktop.png>) ![alt text](<../docs/wireframe lootbox open 5 mobile.png>)
+![alt text](<docs/wireframe lootbox desktop.png>) ![alt text](<docs/wireframe lootbox mobile.png>)
+![alt text](<docs/wireframe lootbox popup desktop.png>) ![alt text](<docs/wireframe lootbox popup mobile.png>)
+![alt text](<docs/wireframe lootbox open 5 desktop.png>) ![alt text](<docs/wireframe lootbox open 5 mobile.png>)
 
 ## User Stories
 
@@ -204,7 +206,7 @@ Acceptance Criteria:
 As i am working on this project solo, the Trello board created is not used to its full potential as cards can be distributed and allocated to team members of a project.
 In this case i used Trello to apply some organization aspects for myself. I have set the tasks, priorities, and color codes to distinguish seperate projects (Part A, Part B, etc).
 
-![alt text](<../docs/Trello 1.png>)
-![alt text](<../docs/Trello 2.png>)
-![alt text](<../docs/Trello 3.png>)
+![alt text](<docs/Trello 1.png>)
+![alt text](<docs/Trello 2.png>)
+![alt text](<docs/Trello 3.png>)
 
