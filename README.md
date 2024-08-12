@@ -1,5 +1,23 @@
 # T3A2-B - Pokemon Lootbox (Fullstack app)
 
+Github Repo
+
+https://github.com/navko11/pokemon-lootbox
+
+Deployed Website
+
+https://pokelootbox.netlify.app
+
+GitBash terminal used in VScode
+
+Made with React + Vite for performance
+
+npm create vite
+
+- npm install
+- npm run dev:client (front-end)
+- npm start (back-end)
+or npm run dev:server (nodemon)
 
 
 The website has been deployed and closely resembles the wireframes which i had planned initally. 
@@ -11,6 +29,7 @@ Functions and features being worked on and not yet complete:
 - Inventory page
 - Top up feature
 - Pity system for rolling
+- Responsive design for all screen sizes
 
 The website is still fully functional as tested.
 
