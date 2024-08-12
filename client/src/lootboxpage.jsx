@@ -6,7 +6,7 @@ import Header from './components/header'
 import Footer from './components/footer'
 import images from './assets/pokemonsprites/1sprites';
 
-import './styles/Lootbox.css';
+import './styles/lootbox.css';
 
 // function to start rolling lootboxes and applying RNG formula
 function Lootbox() {
