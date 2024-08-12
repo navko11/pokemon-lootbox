@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/header.css'; 
 
 function Header() {
@@ -8,9 +9,9 @@ function Header() {
         <ul>
           {/* credits balance = infinite until purchase function created */}
           <li className="credits">Credits: ∞</li> 
-          <li><a href="/home">Home</a></li>
-          <li><a href="/shop">Buy Credits</a></li>
-          <li><a href="/login">Logout</a></li>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/shop">Buy Credits</Link></li>
+          <li><Link to="/login">Logout</Link></li>
         </ul>
       </nav>
     </header>
